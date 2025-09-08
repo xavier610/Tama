@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fasttama</title>
+  <style>
+    body {
+      background-color: #1e1e2f;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Container rata tengah */
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header Profil (foto, nama, bio) di tengah */
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    /* Foto profil dengan animasi melayang + glow gradasi */
+    .profile-image {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ffffff;
+      margin-bottom: 15px;
+      animation: float 4s ease-in-out infinite, glow 6s ease-in-out infinite;
+    }
+
+    /* Animasi melayang */
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Animasi glow gradasi */
+    @keyframes glow {
+      0% { box-shadow: 0 0 15px #90ee90, 0 0 30px #90ee90; }   /* hijau */
+      33% { box-shadow: 0 0 20px #00bfff, 0 0 40px #00bfff; }  /* biru */
+      66% { box-shadow: 0 0 25px #8a2be2, 0 0 50px #8a2be2; }  /* ungu */
+      100% { box-shadow: 0 0 15px #90ee90, 0 0 30px #90ee90; } /* kembali hijau */
+    }
+
+    /* Nama dan bio */
+    .profile-name {
+      font-size: 1.5rem;
+      margin: 10px 0 5px;
+    }
+
+    .profile-bio {
+      color: #90ee90; /* hijau lembut */
+      margin: 2px 0;
+    }
+
+    /* Tombol link */
+    .link-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 20px;
+      margin: 10px 0;
+      border-radius: 10px;
+      background-color: #2a2a40;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .link-button:hover {
+      background-color: #3a3a5c;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="profile">
+      <!-- Foto profil dengan animasi glow gradasi -->
+      <img src="IMG_20250908_184409.jpg" alt="Fasttama" class="profile-image" />
+
+      <h1 class="profile-name">NARARYA AYODYA FASTTAMA</h1>
+      <p class="profile-bio">TTT: Ponorogo, 05,03,2012</p>
+      <p class="profile-bio">Hobi: -</p>
+      <p class="profile-bio">Cita-cita: Insinyur</p>
+    </header>
+
+    <main class="links">
+      <a href="https://maps.app.goo.gl/eTwRYvqyc1y6mCbQ6" class="link-button" target="_blank">🌐 Alamat</a>
+      <a href="https://www.instagram.com/fsttama?igsh=MTZyY2ltdWk4a2N6" class="link-button" target="_blank">📸 Instagram</a>
+      <a href="https://www.tiktok.com/@nryyadyftm?_t=ZS-8ygANidHR20&_r=1" class="link-button" target="_blank">🎵 TikTok</a>
+      <a href="https://wa.wizard.id/678b09" class="link-button" target="_blank">📱 WhatsApp</a>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 Fasttama</p>
+    </footer>
+  </div>
+</body>
+</html>
